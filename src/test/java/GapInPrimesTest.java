@@ -49,6 +49,13 @@ public class GapInPrimesTest {
     }
 
     @Test
+    public void shouldFindGapForAnyGap() {
+        assertEquals("[359, 367]", Arrays.toString(GapInPrimes.gap(8,300,400)));
+        assertEquals("[337, 347]", Arrays.toString(GapInPrimes.gap(10,300,400)));
+    }
+
+
+    @Test
     public void NextPrimeShouldWorkForLowPrimeNumbers() {
         assertEquals(5,GapInPrimes.nextPrimeNumberIncluding(4));
     }

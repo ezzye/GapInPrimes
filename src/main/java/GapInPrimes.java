@@ -10,7 +10,7 @@ class GapInPrimes {
         long[] result = new long[2];
 
         while(1==1) {
-            second = nextPrimeNumberIncluding(first + g);
+            second = nextPrimeNumberIncluding(first + 1);
             if(second-first==g) {
                 result[0]=first;
                 result[1]=second;
@@ -18,7 +18,10 @@ class GapInPrimes {
             }
             first++;
             first = nextPrimeNumberIncluding(first);
-            //second less first less than or equal to two return null
+
+            if(second > n) {
+                return null;
+            }
         }
 
     }
